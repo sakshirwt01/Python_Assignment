@@ -1,3 +1,4 @@
+
 String Programming Questions
 Basic
 1. Write a program to count the number of vowels in a string.
@@ -84,12 +85,18 @@ for ch in s:
         
 9. Check if two strings are anagrams.
 
-s1=input("Enter string:")
-s2=input("Enter string:")
-if sorted(S!)==sorted(S2):
-    print("Anagram")
+st1 = "SILENT"
+st2 = "LISTEN"
+if len(st1)==len(st2):
+    for ch in st1:
+        if st1.count(ch)!=st2.count(ch):
+            print("Strings Are Not Anagram")
+            break
+    else:
+        print("Strings Are Anagram")
 else:
-    print(Not Anagram")
+    print("Strings Are Not Anagram!")
+
     
 10. Convert "hello world" → "Hello World" (title case without using .title()).
 
@@ -113,6 +120,20 @@ for word in words:
 print("Longest word:",longest)
 
 12. Compress a string like "aaabbc" → "a3b2c1".
+          
+st = "aaabbc"
+i = 0
+count = 1
+temp = ""
+while i<len(st)-1:
+    if st[i]==st[i+1]:
+        count+=1
+    else:
+        temp = temp+st[i]+str(count)
+        count = 1
+    i=i+1
+temp = temp+st[i]+str(count)
+print(temp)
 
 13. Count words, characters, and digits in a string.
 
@@ -129,13 +150,16 @@ print("Digits:",digits)
 
 14. Rotate a string left by n positions.
 
-s="abcdef"
-n=2
-print(s[n:]+s[:n])
+st = "AMANKUMAR"
+print(st)
+n = int(input("No of position by left : "))
+st = st[n:]+st[0:n]
+print(st)
 
 15. Find all substrings of a given string.
 
-s="abc"
-for i in range(len(s)):
-    for j in range(i+1,len(s)+1):
-        print(s[i:j])
+st = "AMANKUMAR"
+for i in range(0,len(st)):
+    print(st[0:i+1])
+
+
