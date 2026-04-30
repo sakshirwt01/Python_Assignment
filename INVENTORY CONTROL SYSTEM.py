@@ -86,12 +86,12 @@ def updateProduct():
 def deleteProducts():
     file1 = open('products.bin','rb')
     file2 = open('temp.bin','ab')
-    cid = input("\t Enter Product ID To Delete : ")
+    pid = input("\t Enter Product ID To Delete : ")
     flag = 0
     try:
         while True:
             data = pickle.load(file1)
-            if data==cid:
+            if data==pid:
                 print("\t Product Name :",pickle.load(file1))
                 pickle.load(file1)
                 pickle.load(file1)
