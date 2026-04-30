@@ -218,7 +218,7 @@ def sellProduct():
                     print("\n\t Not enough stock!")
 
             pickle.dump(product_id, temp_file)
-            pickle.dump(Available_stock, temp_file)
+            pickle.dump(AvailableStock, temp_file)
             pickle.dump(ministock, temp_file)
             pickle.dump(lastupdated, temp_file)
 
